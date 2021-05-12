@@ -35,7 +35,7 @@
         <!-- 公用包 -->
         <dependency>
             <groupId>com.sy</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>core</artifactId>
             <version>1.0.0</version>
         </dependency>
 
