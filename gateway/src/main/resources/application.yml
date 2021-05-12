@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: consumer
+          uri: lb://consumer
+          predicates:
+            - Path=/consumer/**
+          filters:
+            - StripPrefix=1
