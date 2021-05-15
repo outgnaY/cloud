@@ -8,3 +8,24 @@ spring:
             - Path=/consumer/**
           filters:
             - StripPrefix=1
+
+        - id: account
+          uri: lb://account
+          predicates:
+            - Path=/account/**
+          filters:
+            - StripPrefix=1
+
+        - id: order
+          uri: lb://order
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
+
+        - id: storage
+          uri: lb://storage
+          predicates:
+            - Path=/storage/**
+          filters:
+            - StripPrefix=1

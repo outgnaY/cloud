@@ -25,7 +25,9 @@ public enum ErrorCode {
     /**
      * 业务相关错误
      */
-    GENERAL_ERROR(-1, "出错");
+    GENERAL_ERROR(-1, "出错"),
+
+    DATA_NOT_FOUND(10001, "找不到数据");
 
     private int errorCode;
 

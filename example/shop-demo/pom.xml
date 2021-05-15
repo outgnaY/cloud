@@ -8,10 +8,16 @@
         <groupId>com.sy</groupId>
         <version>1.0.0</version>
     </parent>
-    
+
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>simple-crud</artifactId>
+    <artifactId>shop-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
+    <modules>
+        <module>shop-demo-account</module>
+        <module>shop-demo-order</module>
+        <module>shop-demo-storage</module>
+    </modules>
 
 
 </project>

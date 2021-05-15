@@ -14,7 +14,7 @@ import lombok.Setter;
 public class CommonResult<T> {
 
     /**
-     * http状态码
+     * 错误码
      */
     @Getter
     @Setter
@@ -35,11 +35,11 @@ public class CommonResult<T> {
     private T data;
 
     public static <T> CommonResult<T> success() {
-        return new CommonResult<>(ErrorCode.SUCCESS.getErrorCode(), null, null);
+        return new CommonResult<>(ErrorCode.SUCCESS.getErrorCode(), "", null);
     }
 
     public static <T> CommonResult<T> success(T data) {
-        return new CommonResult<>(ErrorCode.SUCCESS.getErrorCode(), null, data);
+        return new CommonResult<>(ErrorCode.SUCCESS.getErrorCode(), "", data);
     }
 
     public static <T> CommonResult<T> success(String message, T data) {
@@ -47,7 +47,7 @@ public class CommonResult<T> {
     }
 
     public static <T> CommonResult<T> error() {
-        return new CommonResult<>(ErrorCode.GENERAL_ERROR.getErrorCode(), null, null);
+        return new CommonResult<>(ErrorCode.GENERAL_ERROR.getErrorCode(), ErrorCode.GENERAL_ERROR.getErrorMsg(), null);
     }
 
     public static <T> CommonResult<T> error(String message) {
@@ -55,7 +55,7 @@ public class CommonResult<T> {
     }
 
     public static <T> CommonResult<T> error(T data) {
-        return new CommonResult<>(ErrorCode.GENERAL_ERROR.getErrorCode(), null, data);
+        return new CommonResult<>(ErrorCode.GENERAL_ERROR.getErrorCode(), "", data);
     }
 
     public static <T> CommonResult<T> error(String message, T data) {
@@ -63,7 +63,7 @@ public class CommonResult<T> {
     }
 
     public static <T> CommonResult<T> error(int code, String message, T data) {
-        return new CommonResult<>(code, null, null);
+        return new CommonResult<>(code, message, null);
     }
 
 }

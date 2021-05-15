@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sy.common.core.result.CommonResult;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.io.buffer.DataBufferFactory;
@@ -14,22 +15,17 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-import java.util.Map;
 
 /**
  * 全局异常处理器
  */
+@Slf4j
 @Order(-2)
 @Component
 @RequiredArgsConstructor
 public class GlobalExceptionHandler implements ErrorWebExceptionHandler {
-
+    
     private final ObjectMapper objectMapper;
-
-    /**
-     * 异常信息
-     */
-    private ThreadLocal<Map<String, Object>> exceptionHandlerResult = new ThreadLocal<>();
 
     @Override
     public Mono<Void> handle(ServerWebExchange exchange, Throwable ex) {

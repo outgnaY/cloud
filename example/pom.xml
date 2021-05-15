@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>simplest-demo</module>
-        <module>simple-crud</module>
+        <module>shop-demo</module>
     </modules>
 
 
