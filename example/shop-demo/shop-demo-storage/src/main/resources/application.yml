@@ -25,4 +25,11 @@ spring:
           enabled: true
         log4j2:
           enabled: true
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

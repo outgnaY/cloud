@@ -29,3 +29,11 @@ spring:
             - Path=/storage/**
           filters:
             - StripPrefix=1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

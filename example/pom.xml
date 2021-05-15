@@ -12,6 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>example</artifactId>
     <packaging>pom</packaging>
+    <version>1.0.0</version>
     <modules>
         <module>simplest-demo</module>
         <module>shop-demo</module>
