@@ -22,6 +22,7 @@
             <version>${sentinel.version}</version>
         </dependency>
 
+        <!-- sentinel规则持久化 -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>

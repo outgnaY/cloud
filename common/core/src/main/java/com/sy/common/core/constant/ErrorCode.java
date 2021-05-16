@@ -38,9 +38,9 @@ public enum ErrorCode {
     SENTINEL_BLOCK(20001,  "sentinel限流控制"),
 
     /**
-     * sentinel熔断降级
+     * sentinel失败
      */
-    SENTINEL_FALLBACK(20002, "sentinel熔断降级");
+    SENTINEL_FALLBACK(20002, "sentinel失败");
 
 
     private int errorCode;

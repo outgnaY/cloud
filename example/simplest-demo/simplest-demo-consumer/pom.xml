@@ -13,5 +13,16 @@
     <artifactId>simplest-demo-consumer</artifactId>
     <version>1.0.0</version>
 
+    <dependencies>
+
+        <!-- sentinel -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <version>${sentinel.version}</version>
+        </dependency>
+
+    </dependencies>
+
 
 </project>
