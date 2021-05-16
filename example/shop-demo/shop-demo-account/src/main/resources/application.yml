@@ -25,6 +25,20 @@ spring:
           enabled: true
         log4j2:
           enabled: true
+  cloud:
+    sentinel:
+      transport:
+        port: 8077
+        dashboard: 127.0.0.1:8077
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            namespace: 4c499d3d-e19b-4e3e-94a8-78efd1327ae4
+            dataId: sentinel
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 management:
   endpoints:
     web:

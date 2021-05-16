@@ -25,9 +25,23 @@ public enum ErrorCode {
     /**
      * 业务相关错误
      */
+    /**
+     * 通用错误
+     */
     GENERAL_ERROR(-1, "出错"),
 
-    DATA_NOT_FOUND(10001, "找不到数据");
+    DATA_NOT_FOUND(10001, "找不到数据"),
+
+    /**
+     * sentinel限流
+     */
+    SENTINEL_BLOCK(20001,  "sentinel限流控制"),
+
+    /**
+     * sentinel熔断降级
+     */
+    SENTINEL_FALLBACK(20002, "sentinel熔断降级");
+
 
     private int errorCode;
 
